@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML5 Template</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --danger-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--primary-color);
+            padding: 0.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .btn-danger {
+            background: var(--danger-color);
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+        
+        form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                margin: 0.2rem 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .animated {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Modern HTML5 Website</h1>
+        <p>Responsive, accessible, and feature-rich</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#login" class="btn">Login</a>
+    </nav>
+    
+    <main class="container">
+        <section id="home" class="animated">
+            <h2>Welcome to Our Website</h2>
+            <p>This is a demonstration of modern HTML5 features with responsive design, semantic markup, and interactive elements.</p>
+            
+            <div class="grid">
+                <article class="card">
+                    <h3>Semantic HTML5</h3>
+                    <p>Proper use of semantic elements like &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, and &lt;footer&gt; for better accessibility and SEO.</p>
+                    <a href="#semantic" class="btn">Learn More</a>
+                </article>
+                
+                <article class="card">
+                    <h3>Responsive Design</h3>
+                    <p>Built with mobile-first approach using CSS Grid, Flexbox, and media queries to work on all devices.</p>
+                    <a href="#responsive" class="btn">Learn More</a>
+                </article>
+                
+                <article class="card">
+                    <h3>Modern Features</h3>
+                    <p>Includes CSS variables, animations, transitions, and form validation without JavaScript.</p>
+                    <a href="#features" class="btn">Learn More</a>
+                </article>
+            </div>
+        </section>
+        
+        <section id="features" class="animated">
+            <h2>Key Features</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Interactive Elements</h3>
+                    <details>
+                        <summary>Click to view details</summary>
+                        <p>HTML5 provides interactive elements like &lt;details&gt; and &lt;summary&gt; that work without JavaScript.</p>
+                    </details>
+                    
+                    <div style="margin-top: 1rem;">
+                        <progress value="75" max="100"></progress>
+                        <p>Progress bar using &lt;progress&gt; element</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>Media Support</h3>
+                    <figure>
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="https://via.placeholder.com/400x200">
+                            <source media="(min-width: 500px)" srcset="https://via.placeholder.com/300x150">
+                            <img src="https://via.placeholder.com/200x100" alt="Responsive image example" style="width:100%; border-radius:4px;">
+                        </picture>
+                        <figcaption>Responsive images with &lt;picture&gt; element</figcaption>
+                    </figure>
+                </div>
+                
+                <div class="card">
+                    <h3>Form Validation</h3>
+                    <form id="demo-form" style="padding:0; box-shadow:none;">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters">
+                        </div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="animated">
+            <h2>Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="support">Support</option>
+                        <option value="sales">Sales</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn">Send Message</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Modern HTML5 Website. All rights reserved.</p>
+        <p>
+            <a href="#privacy" style="color:white;">Privacy Policy</a> | 
+            <a href="#terms" style="color:white;">Terms of Service</a>
+        </p>
+    </footer>
+    
+    <script>
+        // Simple JavaScript for demonstration
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form submission handler
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Form submitted successfully! (This is a demo)');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation class to sections as they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
